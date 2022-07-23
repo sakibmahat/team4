@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeMgmtSystem.BL
 {
-    public class EmployeeBAL
+    public class EmployeeBL
     {
         EmployeeDAL objEmployeeDAL = new EmployeeDAL();
 
@@ -22,14 +22,14 @@ namespace EmployeeMgmtSystem.BL
             objEmployeeDAL.UpdateEmployee(objEmployee);
         }
 
-        public void DeleteEmployee(int id)
+        public void DeleteEmployee(string empId)
         {
-            objEmployeeDAL.DeleteEmployee(id);
+            objEmployeeDAL.DeleteEmployee(empId);
         }
 
-        public Employee GetEmployee(int id)
+        public Employee GetEmployee(string empId)
         {
-            Employee objEmployee = objEmployeeDAL.GetEmployee(id);
+            Employee objEmployee = objEmployeeDAL.GetEmployee(empId);
             return objEmployee;
         }
 
@@ -37,5 +37,10 @@ namespace EmployeeMgmtSystem.BL
         {
             return objEmployeeDAL.GetEmployees();
         }
+
+        //public object GetEmployee(string empId)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

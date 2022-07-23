@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeMgmtSystem.BL
 {
-    public class GradeMasterBL
+    public class gradeMasterBL
     {
         GradeMasterDAL objGradeMasterDAL = new GradeMasterDAL();
 
@@ -22,20 +22,20 @@ namespace EmployeeMgmtSystem.BL
             objGradeMasterDAL.UpdateGradeMaster(objGradeMaster);
         }
 
-        public void DeleteGradeMaster(int id)
+        public void DeleteGradeMaster(string gradeCode)
         {
-            objGradeMasterDAL.DeleteGradeMaster(id);
+            objGradeMasterDAL.DeleteGradeMaster(gradeCode);
         }
 
-        public GradeMaster GetGradeMaster(int id)
+        public GradeMaster GetGradeMaster(string gradeCode)
         {
-            GradeMaster objGradeMaster = objGradeMasterDAL.GetGradeMaster(id);
+            GradeMaster objGradeMaster = objGradeMasterDAL.GetGradeMaster(gradeCode);
             return objGradeMaster;
         }
 
         public IEnumerable<GradeMaster> GetGradeMasters()
         {
-            return objGradeMasterDAL.GetGradeMaster();
+            return objGradeMasterDAL.GetGradeMasters();
         }
     }
 }

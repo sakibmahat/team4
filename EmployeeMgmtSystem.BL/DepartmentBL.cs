@@ -12,22 +12,22 @@ namespace EmployeeMgmtSystem.BL
     {
         DepartmentDAL objDepartmentDAL = new DepartmentDAL();
 
-        public void CreateEmployee(Department objEmployee)
+        public void CreateDepartment(Department objDepartment)
         {
-            objDepartmentDAL.CreateDepartment(objEmployee);
+            objDepartmentDAL.CreateDepartment(objDepartment);
         }
 
-        public void UpdateEmployee(Department objEmployee)
+        public void UpdateDepartment(Department objDepartment)
         {
-            objDepartmentDAL.UpdateDepartment(objEmployee);
+            objDepartmentDAL.UpdateDepartment(objDepartment);
         }
 
-        public void DeleteEmployee(int id)
+        public void DeleteDepartment(int id)
         {
             objDepartmentDAL.DeleteDepartment(id);
         }
 
-        public Department GetEmployee(int id)
+        public Department GetDepartment(int id)
         {
             Department objDepartment = objDepartmentDAL.GetDepartment(id);
             return objDepartment;
